@@ -13,7 +13,8 @@ import java.util.Map;
 public class MajorityElement {
 
     public static void main(String[] args) {
-        majorityElement2(new int[] {2, 2});
+        // 注意，该例子有问题，没有确保前提：并且给定的数组总是存在多数元素，否则不能用摩尔投票
+        System.out.println(majorityElement2(new int[] {1,1,1,1,1,2,2,2,2,4,4,4}));
 
 
     }
