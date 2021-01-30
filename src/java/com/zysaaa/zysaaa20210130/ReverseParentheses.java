@@ -1,5 +1,7 @@
 package com.zysaaa.zysaaa20210130;
 
+import java.util.Stack;
+
 /**
  * @description: 给出一个字符串 s（仅含有小写英文字母和括号）。
  *
@@ -12,6 +14,8 @@ package com.zysaaa.zysaaa20210130;
  *
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/reverse-substrings-between-each-pair-of-parentheses
+ *
+ * 不用递归，用栈：每匹配一次括号，就将括号内的字符串reverse。
  * @author:zysaaa
  * @date: 2021/1/30 17:30
  */
@@ -35,6 +39,42 @@ public class ReverseParentheses {
         }
         return s;
     }
+
+    public String reverseParentheses2(String s) {
+
+        Stack<Integer> stack = new Stack<>();
+
+        char[] chars = s.toCharArray();
+        for (int i = 0; i<chars.length; i++) {
+            if (chars[i] == '(') {
+                stack.push(i);
+            }
+            if (chars[i] == ')') {
+                reverse(chars, stack.pop() + 1, i-1);
+            }
+        }
+        StringBuilder sb = new StringBuilder();
+        for (char chars1 : chars) {
+            if (chars1 != '(' && chars1 != ')') {
+                sb.append(chars1);
+            }
+        }
+        return sb.toString();
+
+    }
+
+    private void reverse(char[] chars, int i, int j) {
+
+        while (i < j) {
+            char tmp = chars[j];
+            chars[j] = chars[i];
+            chars[i] = tmp;
+            i++;
+            j++;
+        }
+
+    }
+
 
     private String reverse(String s) {
         return new StringBuilder(s).reverse().toString();
