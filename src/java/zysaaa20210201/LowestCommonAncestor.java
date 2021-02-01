@@ -49,10 +49,7 @@ public class LowestCommonAncestor {
         if (treeNode != null) {
             return treeNode;
         }
-        if (treeNode2 != null) {
-            return treeNode2;
-        }
-        return null;
+        return treeNode2;
     }
 
 
