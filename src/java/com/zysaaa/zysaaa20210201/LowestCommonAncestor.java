@@ -1,4 +1,4 @@
-package zysaaa20210201;
+package com.zysaaa.zysaaa20210201;
 
 import com.zysaaa.common.TreeNode;
 
