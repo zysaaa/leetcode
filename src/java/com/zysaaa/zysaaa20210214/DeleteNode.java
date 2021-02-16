@@ -25,6 +25,21 @@ public class DeleteNode {
             cur = cur.next;
         }
         return pre;
-
     }
+
+    // 哑节点
+    public ListNode deleteNode2(ListNode head, int val) {
+        ListNode dummyHead = new ListNode(0);
+        ListNode pre = dummyHead;
+        dummyHead.next = head;
+        while (pre.next != null) {
+            if (pre.next.val == val) {
+                pre.next = pre.next.next;
+                break;
+            }
+            pre = pre.next;
+        }
+        return dummyHead.next;
+    }
+
 }
