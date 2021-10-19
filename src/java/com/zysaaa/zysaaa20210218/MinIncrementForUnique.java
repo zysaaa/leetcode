@@ -1,7 +1,6 @@
-package zysaaa20210218;
+package com.zysaaa.zysaaa20210218;
 
 import java.util.Arrays;
-import java.util.HashSet;
 
 /**
  * @description: https://leetcode-cn.com/problems/minimum-increment-to-make-array-unique/

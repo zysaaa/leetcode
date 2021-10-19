@@ -28,3 +28,5 @@ public class MaxSubArray {
     }
 }
 // keep it until u make it. Then you can start think of other things.
+
+// what is result? tomorrow we will find it?

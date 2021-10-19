@@ -11,18 +11,15 @@ package com.zysaaa.zysaaa20210225;
 public class MaxProfit {
 
     public int maxProfit(int[] prices) {
-        if (prices.length == 0 || prices.length == 1) {
-            return 0;
-        }
-        int result = 0;
-        int tmp = prices[0];
-        for (int price : prices) {
-            if (price > tmp) {
-                result = Math.max((price - tmp), result);
+        int max = 0;
+        int now = prices[0];
+        for (int i = 1; i < prices.length; i++) {
+            if (prices[i] > now) {
+                max = Math.max(max, prices[i] - now);
             } else {
-                tmp = price;
+                now = prices[i];
             }
         }
-        return result;
+        return max;
     }
 }

@@ -35,7 +35,9 @@ import java.util.Set;
  * @date: 2021/2/5 18:01
  */
 public class StringMatching {
+    public static void main(String[] args) {
 
+    }
     public List<String> stringMatching(String[] words) {
         Set<String> result = new HashSet<>();
         for (int i = 0; i < words.length; i++) {

@@ -54,5 +54,4 @@ public class DuiPaiXuaaaaa {
         nums[i] = nums[j];
         nums[j] = temp;
     }
-
 }

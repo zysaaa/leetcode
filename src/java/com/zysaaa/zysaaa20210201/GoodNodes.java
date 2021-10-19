@@ -20,11 +20,9 @@ public class GoodNodes {
     }
 
     public void count(TreeNode node, int lastNodeVal) {
-
         if (node == null) {
             return;
         }
-
         if (node.val >= lastNodeVal) {
             count++;
             count(node.left, node.val);
@@ -33,7 +31,5 @@ public class GoodNodes {
             count(node.left, lastNodeVal);
             count(node.right, lastNodeVal);
         }
-
-
     }
 }

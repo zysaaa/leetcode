@@ -15,7 +15,7 @@ package com.zysaaa.zysaaa20210124;
 public class NumberOfMatches {
 
     public static void main(String[] args) {
-        System.out.println(numberOfMatches(14));
+        //System.out.println(numberOfMatches(14));
     }
 
     public  int numberOfMatches(int n) {

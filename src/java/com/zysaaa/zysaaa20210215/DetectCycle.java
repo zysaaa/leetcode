@@ -24,6 +24,6 @@ public class DetectCycle {
 
     // 快慢指针 ？？
     public ListNode detectCycle2(ListNode head) {
-
+        return null;
     }
 }
